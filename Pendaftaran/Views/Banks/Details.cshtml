@@ -1,0 +1,42 @@
+﻿@model Pendaftaran.Models.Bank
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bank</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaPetugasBank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaPetugasBank)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisKelamin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisKelamin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TanggalPembayaran)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TanggalPembayaran)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoRegistrasi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoRegistrasi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPetugasBank">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

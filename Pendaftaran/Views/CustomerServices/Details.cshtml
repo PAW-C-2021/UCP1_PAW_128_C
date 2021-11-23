@@ -1,0 +1,30 @@
+﻿@model Pendaftaran.Models.CustomerService
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerService</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaCustomerService)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaCustomerService)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisKelamin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisKelamin)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdCustomer">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

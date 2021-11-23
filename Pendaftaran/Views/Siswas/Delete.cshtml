@@ -1,0 +1,51 @@
+﻿@model Pendaftaran.Models.Siswa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Siswa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaSiswa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaSiswa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TanggalLahir)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TanggalLahir)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisKelamin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisKelamin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoRegistrasi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoRegistrasi)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdSiswa" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
